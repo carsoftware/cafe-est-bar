@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar principal */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo en el centro */
+.navbar-logo img {
+    height: 100px;
+}
+
+/* Botones del navbar */
+.menu-toggle, .search-toggle {
+    background: none;
+    border: none;
+    color: #b8773b;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menú lateral */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #b8773b;
+    transition: left 0.4s ease-in-out;
+    z-index: 9999;
+}
+
+.menu-overlay.active {
+    left: 0;
+}
+
+.menu-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.menu-content .close-menu {
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.menu-nav a:hover {
+    color: #f8b400;
+}
+
+/* Íconos sociales debajo del menú */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #f8b400;
+}
+
+/* Modal de búsqueda */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #b8773b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.search-box .search-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #362722;
+}
+
+.search-box .close-search {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #362722;
+}
