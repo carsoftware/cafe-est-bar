@@ -60,6 +60,9 @@ body {
     overflow-y: auto; /* En caso de que haya contenido extra, se agregue scroll */
     box-sizing: border-box; /* Asegura que padding no afecte el tamaño */
 }
+.dropdown-item{
+    color: #b8773b !important;
+}
 
 .menu-content .close-menu {
     font-size: 30px;
