@@ -32,25 +32,33 @@ body {
     cursor: pointer;
 }
 
+
+
+
 /* Menú lateral */
 .menu-overlay {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 300px;
-    height: 100vh;
+    width: 300px; /* Ancho del menú */
+    height: 100vh; /* Altura completa */
     background-color: #b8773b;
-    transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out; /* Animación para abrir/cerrar */
     z-index: 9999;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .menu-overlay.active {
-    left: 0;
+    left: 0; /* Cuando el menú está activo */
 }
 
 .menu-content {
-    padding: 30px;
+    width: 100%; /* Para que el contenido ocupe todo el ancho disponible */
+    padding: 50px;
     text-align: center;
+    overflow-y: auto; /* En caso de que haya contenido extra, se agregue scroll */
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño */
 }
 
 .menu-content .close-menu {
@@ -64,17 +72,62 @@ body {
     right: 20px;
 }
 
+.menu-nav {
+    padding: 0;
+    margin-top: -80px; /* Espacio desde el top para las opciones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px); /* Para asegurar que el menú ocupe todo el alto */
+}
+
 .menu-nav a {
     display: block;
     color: white;
     text-decoration: none;
     font-size: 20px;
-    margin: 20px 0;
+    margin: 15px 0;
+    transition: color 0.3s ease;
 }
 
 .menu-nav a:hover {
     color: #f8b400;
 }
+
+/* Estilo para el menú en pantallas pequeñas */
+@media (max-width: 767px) {
+    .menu-overlay {
+        width: 80%; /* Menú más ancho en pantallas pequeñas */
+    }
+
+    .menu-content {
+        padding: 30px; /* Menos padding en pantallas pequeñas */
+    }
+
+    .menu-nav a {
+        font-size: 18px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas grandes */
+@media (min-width: 768px) {
+    .menu-overlay {
+        width: 300px; /* Ancho del menú en pantallas grandes */
+    }
+
+    .menu-nav a {
+        font-size: 22px; /* Ajustar el tamaño de la fuente */
+    }
+}
+
+
+
+
+
+
+
+
 
 /* Íconos sociales debajo del menú */
 .social-icons {
