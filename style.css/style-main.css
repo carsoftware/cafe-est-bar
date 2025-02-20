@@ -32,9 +32,6 @@ body {
     cursor: pointer;
 }
 
-
-
-
 /* Menú lateral */
 .menu-overlay {
     position: fixed;
@@ -162,6 +159,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .search-overlay.active {
@@ -202,3 +200,73 @@ body {
     cursor: pointer;
     color: #362722;
 }
+
+/* carusel */
+
+/* Estilos generales */
+  
+  /* Estilo del carrusel */
+  #imageCarousel .carousel-item {
+    transition: transform 1s ease-in-out;
+  }
+  
+  #imageCarousel img {
+    object-fit: cover;
+    height: 70vh;
+    width: 100%;
+  }
+  
+  h1, p {
+    color: #6b625f !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* Estilos de los iconos */
+  i {
+    color: #6b625f;
+    transition: color 0.3s ease;
+  }
+  
+  i:hover {
+    color: #ff9f00;
+  }
+  
+  /* Estilo de los botones */
+  .btn-primary {
+    background-color: #6b625f !important;
+    border-color: #6b625f !important;
+  }
+  
+  .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover, .btn-outline-light:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Ajustes para texto centrado */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Estilos de márgenes para la columna de texto */
+  .text-md-start {
+    text-align: left !important;
+  }
+  
+  @media (max-width: 767px) {
+    /* Cambiar tamaño de los iconos en pantallas pequeñas */
+    .fs-2 {
+      font-size: 1.5rem;
+    }
+  
+    /* Ajustar botones para pantallas pequeñas */
+    .btn-lg {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
